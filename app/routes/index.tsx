@@ -1,7 +1,7 @@
 export default function Index() {
   return (
     <div>
-      My content
+      My main content
     </div>
   );
 }
