@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: auto;
   max-width: 1440px;
@@ -54,8 +61,7 @@ header .container {
   text-decoration: none;
 }
 
-.button-primary {
-  background: #C57900;
+button {
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -66,9 +72,17 @@ header .container {
   border-radius: 16px;
 }
 
-.button-primary a {
+button a {
   text-decoration: none;
   color: white;
+}
+
+.primary {
+  background: #C57900;
+}
+
+.secondary {
+  background: #3C4850;
 }
 
 .footer {
@@ -76,4 +90,27 @@ header .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.service-title {
+  font-style: normal;
+  font-size: 52px;
+  line-height: 63px
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-container .description {
+  text-align: center;
 }

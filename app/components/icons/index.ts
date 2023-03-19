@@ -1,0 +1,10 @@
+export { default as Icon1 } from "./Icon1";
+export { default as Icon2 } from "./Icon2";
+export { default as Icon3 } from "./Icon3";
+export { default as Icon4 } from "./Icon4";
+export { default as Icon5 } from "./Icon5";
+export { default as Icon6 } from "./Icon6";
+export { default as Logo } from "./Logo";
+export { default as MenuClose } from "./MenuClose";
+export { default as MenuExpand } from "./MenuExpand";
+export { default as RightArrow } from "./RightArrow";

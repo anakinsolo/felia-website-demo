@@ -10,7 +10,7 @@ import {
 import type { ReactNode } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import stylesheet from './styles/global.css';
+import stylesheet from './assets/styles/global.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
