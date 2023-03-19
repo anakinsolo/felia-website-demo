@@ -71,10 +71,6 @@ header .container {
   color: white;
 }
 
-.logo {
-  max-height: 100%;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
