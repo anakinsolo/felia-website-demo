@@ -7,7 +7,7 @@ export default function Index() {
       <div className='hero-section'>
         <div className='title'>
           Bringing ideas to life: <br />
-          Digital solutions <br />
+          <span className='inner-text'>Digital solutions</span> <br />
           made easy <br />
         </div>
         <div className='hero-content'>
@@ -26,7 +26,7 @@ export default function Index() {
         </div>
       </div>
       <div className='services-section'>
-        <div className='title'>Our services</div>
+        <div className='title'>Our <span className='inner-text'>services</span></div>
         <div className='service-list'>
           <div className='service-container'>
             <DevelopmentLogo />

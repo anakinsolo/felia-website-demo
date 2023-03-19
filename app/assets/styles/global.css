@@ -15,6 +15,13 @@ body {
   font-size: 100%;
 }
 
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   max-width: 75em;
   margin: auto;
@@ -25,6 +32,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   max-height: 69.08px;
+  width: 100%;
 }
 
 .menu {
@@ -92,6 +100,10 @@ button a {
   font-style: normal;
   font-size: 3.25rem;
   line-height: 4rem
+}
+
+.title .inner-text {
+  color: #C57900;
 }
 
 .service-list {
