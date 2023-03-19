@@ -2,7 +2,11 @@ export default function Header() {
   return (
     <header>
       <div className='container'>
-        <div>Logo</div>
+        <div className='logo'>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <image href="/svg/felia-white.svg"/>
+          </svg>
+        </div>
         <div className='menu'>
           <ul>
             <li><a href='/'>Home</a></li>
