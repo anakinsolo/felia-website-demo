@@ -1,11 +1,11 @@
 import Button from '~/components/Button';
-import { Icon1, Icon2, Icon3, Icon4, Icon5, Icon6 } from '~/components/icons';
+import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 
 export default function Index() {
   return (
     <div className='container'>
       <div className='hero-section'>
-        <div className='hero-title'>
+        <div className='title'>
           Bringing ideas to life: <br />
           Digital solutions <br />
           made easy <br />
@@ -26,31 +26,31 @@ export default function Index() {
         </div>
       </div>
       <div className='services-section'>
-        <div className='service-title'>Our services</div>
+        <div className='title'>Our services</div>
         <div className='service-list'>
           <div className='service-container'>
-            <Icon1 />
-            <div className='description'>Content Management Systems</div>
+            <DevelopmentLogo />
+            <div className='description'>Custom Web Development</div>
           </div>
           <div className='service-container'>
-            <Icon2 />
-            <div className='description'>UI & UX Design</div>
-          </div>
-          <div className='service-container'>
-            <Icon3 />
-            <div className='description'>Search Engine Optimization</div>
-          </div>
-          <div className='service-container'>
-            <Icon4 />
-            <div className='description'>Website Maintenance</div>
-          </div>
-          <div className='service-container'>
-            <Icon5 />
+            <EcomLogo />
             <div className='description'>E-commerce Development</div>
           </div>
           <div className='service-container'>
-            <Icon6 />
-            <div className='description'>Custom Web Development</div>
+            <DesignLogo />
+            <div className='description'>UI & UX Design</div>
+          </div>
+          <div className='service-container'>
+            <CmsLogo />
+            <div className='description'>Content Management Systems</div>
+          </div>
+          <div className='service-container'>
+            <SeoLogo />
+            <div className='description'>Search Engine Optimization</div>
+          </div>
+          <div className='service-container'>
+            <MaintainanceLogo />
+            <div className='description'>Website Maintenance</div>
           </div>
         </div>
         

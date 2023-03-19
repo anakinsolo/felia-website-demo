@@ -10,7 +10,7 @@ export const links: LinksFunction = () => [
 export default function Services() {
   return (
     <div className='container services'>
-      <div className='service-title'>Our services</div>
+      <div className='title'>Our services</div>
       <div className='service-description'>
         <div>Custom Web Development</div>
         <div>E-commerce Development</div>

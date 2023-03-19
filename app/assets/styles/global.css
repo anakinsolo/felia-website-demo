@@ -11,17 +11,9 @@ body {
   font-family: 'Montserrat';
   background: #15202D;
   color: #fff;
+  line-height: 1.5rem;
+  font-size: 100%;
 }
-
-/* header {
-  margin: auto;
-}
-
-
-main {
-  max-width: 1440px;
-  margin: auto;
-} */
 
 .container {
   max-width: 75em;
@@ -37,11 +29,7 @@ header .container {
 
 .menu {
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  /* identical to box height */
-
+  line-height: 1.25rem;
   text-align: center;
   color: white;
 }
@@ -92,10 +80,18 @@ button a {
   align-items: center;
 }
 
-.service-title {
+.hero-section {
+  background-image: url('/images/bg-hero.png');
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title {
   font-style: normal;
-  font-size: 52px;
-  line-height: 63px
+  font-size: 3.25rem;
+  line-height: 4rem
 }
 
 .service-list {
