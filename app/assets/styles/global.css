@@ -106,6 +106,13 @@ button a {
   color: #C57900;
 }
 
+.service-section {
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .service-list {
   display: flex;
   justify-content: center;

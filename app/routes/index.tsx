@@ -25,7 +25,7 @@ export default function Index() {
           </Button>
         </div>
       </div>
-      <div className='services-section'>
+      <div className='service-section'>
         <div className='title'>Our <span className='inner-text'>services</span></div>
         <div className='service-list'>
           <div className='service-container'>
