@@ -1,5 +1,11 @@
 import Button from '~/components/Button';
 import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
+import stylesheet from '~/assets/styles/pages/home.css';
+import type { LinksFunction } from '@remix-run/node';
+
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export default function Index() {
   return (
@@ -8,7 +14,7 @@ export default function Index() {
         <div className='title'>
           Bringing ideas to life: <br />
           <span className='inner-text'>Digital solutions</span> <br />
-          made easy <br />
+          made easy
         </div>
         <div className='hero-content'>
           Empowering businesses to succeed in the digital world. We provide a <br />

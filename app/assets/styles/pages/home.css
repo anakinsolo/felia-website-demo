@@ -1,4 +1,8 @@
-.home {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+.hero-section {
+  background-image: url('/images/bg-hero.png');
+  background-position-x: 110%;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: grid;
+
 }

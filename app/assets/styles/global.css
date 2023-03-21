@@ -27,6 +27,11 @@ header {
   margin: auto;
 }
 
+main .container {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
@@ -86,16 +91,6 @@ button a {
   justify-content: center;
   align-items: center;
   padding-bottom: 4.5rem;
-}
-
-.hero-section {
-  background-image: url('/images/bg-hero.png');
-  background-position-x: 110%;
-  background-repeat: no-repeat;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .title {
