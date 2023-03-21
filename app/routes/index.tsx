@@ -29,31 +29,54 @@ export default function Index() {
         <div className='title'>Our <span className='inner-text'>services</span></div>
         <div className='service-list'>
           <div className='service-container'>
-            <DevelopmentLogo />
-            <div className='description'>Custom Web Development</div>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <DevelopmentLogo />
+              </div>
+              <div className='description'>Custom Web Development</div>
+            </div>
           </div>
           <div className='service-container'>
-            <EcomLogo />
-            <div className='description'>E-commerce Development</div>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <EcomLogo />
+              </div>
+              <div className='description'>E-commerce Development</div>
+            </div>
           </div>
           <div className='service-container'>
-            <DesignLogo />
-            <div className='description'>UI & UX Design</div>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <DesignLogo />
+              </div>
+              <div className='description'>UI & UX Design</div>
+            </div>
+          </div>          
+          <div className='service-container'>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <CmsLogo />
+              </div>
+              <div className='description'>Content Management Systems</div>
+            </div>
           </div>
           <div className='service-container'>
-            <CmsLogo />
-            <div className='description'>Content Management Systems</div>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <SeoLogo />
+              </div>
+              <div className='description'>Search Engine Optimization</div>
+            </div>
           </div>
           <div className='service-container'>
-            <SeoLogo />
-            <div className='description'>Search Engine Optimization</div>
-          </div>
-          <div className='service-container'>
-            <MaintainanceLogo />
-            <div className='description'>Website Maintenance</div>
+            <div className='service-card'>
+              <div className='svg-container'>
+                <MaintainanceLogo />
+              </div>
+              <div className='description'>Website Maintenance</div>
+            </div>
           </div>
         </div>
-        
       </div>
       <div className='about-section'>
         about section

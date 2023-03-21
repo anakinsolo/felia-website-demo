@@ -115,18 +115,30 @@ button a {
 }
 
 .service-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12,2fr);
 }
 
 .service-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  grid-column: span 2;
+  ;
+}
+
+.service-card {
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .service-container .description {
   text-align: center;
+}
+
+.svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
