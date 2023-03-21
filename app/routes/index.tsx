@@ -3,8 +3,8 @@ import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLo
 
 export default function Index() {
   return (
-    <div className='container'>
-      <div className='hero-section'>
+    <div className='container home'>
+      <section className='hero-section'>
         <div className='title'>
           Bringing ideas to life: <br />
           <span className='inner-text'>Digital solutions</span> <br />
@@ -24,8 +24,8 @@ export default function Index() {
             <a href='/our-services'>Our services</a>
           </Button>
         </div>
-      </div>
-      <div className='service-section'>
+      </section>
+      <section className='service-section'>
         <div className='title'>Our <span className='inner-text'>services</span></div>
         <div className='service-list'>
           <div className='service-container'>
@@ -77,13 +77,13 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
-      <div className='about-section'>
+      </section>
+      <section className='about-section'>
         about section
-      </div>
-      <div className='contact-section'>
+      </section>
+      <section className='contact-section'>
         contact section
-      </div>
+      </section>
     </div>
   );
 }

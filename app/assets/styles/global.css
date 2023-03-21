@@ -81,10 +81,11 @@ button a {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding-bottom: 4.5rem;
 }
 
 .hero-section {
@@ -117,12 +118,17 @@ button a {
 .service-list {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(12,2fr);
+  grid-template-columns: repeat(12, 1fr);
 }
+
+@media only screen and (max-width: 600px) {
+  .service-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+ }
 
 .service-container {
   grid-column: span 2;
-  ;
 }
 
 .service-card {

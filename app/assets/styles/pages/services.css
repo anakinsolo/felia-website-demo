@@ -1,3 +1,36 @@
+.service-page {
+  display: grid;
+  gap: 4.5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.service-page .service-card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.service-container-detailed {
+  grid-column: span 6;
+  background: #3C4850;
+  border-radius: 1rem;
+}
+
+.service-container-detailed .service-card {
+  max-width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+
+.service-card .title {
+  font-size: 2rem;
+}
+
+.service-card .svg-container {
+  justify-content: left;
+}
+
 .contact-button {
   display: flex;
   justify-content: center;

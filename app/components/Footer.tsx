@@ -3,7 +3,7 @@ import SvgLogo from './icons/Logo';
 export default function Footer() {
   return (
     <div className='container footer'>
-      <div className='logo'>
+      <div className='svg-container'>
         <SvgLogo />
       </div>
       <div className='copy-right'>

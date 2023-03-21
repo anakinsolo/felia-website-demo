@@ -14,7 +14,7 @@ import stylesheet from './assets/styles/global.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
-  { rel: 'icon', type: 'image/x-icon', href: '/felia-favicon.ico' },
+  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 ];
 
 export const meta: MetaFunction = () => ({
