@@ -103,6 +103,11 @@ button a {
   color: #C57900;
 }
 
+.small {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 .service-section {
   height: 18rem;
   display: flex;
@@ -142,4 +147,46 @@ button a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about-section {
+  height: 18rem;
+  margin-top: 10rem;
+}
+
+.about-titles {
+  width: 50%;
+  float: left;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-content {
+  width: 50%;
+  float: left;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-section {
+  height: 18rem;
+  margin-top: 10rem;
+}
+
+.contact-info {
+  float: left;
+  width: 50%;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
