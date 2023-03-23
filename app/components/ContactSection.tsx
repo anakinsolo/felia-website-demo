@@ -6,7 +6,7 @@ export default function ContactSection() {
         <div className='title'>Get in <span className='inner-text'>touch</span></div>
         <div className='title small'>with our <span className='inner-text'>team</span></div>
       </div>
-      <div className='contact-form'>Form here</div>
+      <div className='contact-form'>Contact form here</div>
     </div>
   );
 }
