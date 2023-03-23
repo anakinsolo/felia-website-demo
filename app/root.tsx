@@ -20,7 +20,7 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'Bringing ideas to life: Digital solutions made easy',
-  viewport: 'width=device-width,initial-scale=1',
+  viewport: 'initial-scale=1',
 });
 
 const RootLayout = ({ children }: {children: ReactNode}) => {
