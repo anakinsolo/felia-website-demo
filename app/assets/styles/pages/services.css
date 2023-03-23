@@ -1,8 +1,7 @@
 .service-page {
   display: grid;
-  gap: 4.5rem;
+  gap: 3rem;
 }
-
 .service-page .service-card {
   display: grid;
   gap: 1.5rem;

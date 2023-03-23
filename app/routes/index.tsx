@@ -40,7 +40,7 @@ export default function Index() {
               <div className='svg-container'>
                 <DevelopmentLogo />
               </div>
-              <div className='description'>Custom Web Development</div>
+              <div className='description'>Custom Web<br/>Development</div>
             </div>
           </div>
           <div className='service-container'>
@@ -48,7 +48,7 @@ export default function Index() {
               <div className='svg-container'>
                 <EcomLogo />
               </div>
-              <div className='description'>E-commerce Development</div>
+              <div className='description'>E-commerce<br/>Development</div>
             </div>
           </div>
           <div className='service-container'>
@@ -64,7 +64,7 @@ export default function Index() {
               <div className='svg-container'>
                 <CmsLogo />
               </div>
-              <div className='description'>Content Management Systems</div>
+              <div className='description'>Content Management<br/>Systems</div>
             </div>
           </div>
           <div className='service-container'>
@@ -72,7 +72,7 @@ export default function Index() {
               <div className='svg-container'>
                 <SeoLogo />
               </div>
-              <div className='description'>Search Engine Optimization</div>
+              <div className='description'>Search Engine<br/>Optimization</div>
             </div>
           </div>
           <div className='service-container'>
@@ -80,7 +80,7 @@ export default function Index() {
               <div className='svg-container'>
                 <MaintainanceLogo />
               </div>
-              <div className='description'>Website Maintenance</div>
+              <div className='description'>Website<br/>Maintenance</div>
             </div>
           </div>
         </div>

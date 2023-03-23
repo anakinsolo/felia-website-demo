@@ -1,8 +1,9 @@
 .hero-section {
   background-image: url('/images/bg-hero.png');
   background-position-x: 110%;
+  background-position-y: 15%;
   background-repeat: no-repeat;
-  height: 70vh;
   display: grid;
+  gap: 3rem;
 
 }

@@ -27,11 +27,6 @@ header {
   margin: auto;
 }
 
-main .container {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-}
-
 header .container {
   display: flex;
   justify-content: space-between;
@@ -108,11 +103,17 @@ button a {
   line-height: 2rem;
 }
 
+section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
 .service-section {
   height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 3rem;
 }
 
 .service-list {
@@ -149,29 +150,20 @@ button a {
   align-items: center;
 }
 
-.about-section {
-  height: 18rem;
-  margin-top: 10rem;
-}
-
 .about-titles {
   width: 50%;
   float: left;
   display: grid;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .about-content {
   width: 50%;
   float: left;
   display: grid;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
-.contact-section {
-  height: 18rem;
-  margin-top: 10rem;
-}
 
 .contact-info {
   float: left;

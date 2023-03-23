@@ -10,9 +10,10 @@ export const links: LinksFunction = () => [
 
 export default function Services() {
   return (
-    <div className='container service-page'>
-      <div className='title'>Our <span className='inner-text'>services</span></div>
-      <div className='service-list'>
+    <div className='container'>
+      <section className='service-page'>
+        <div className='title'>Our <span className='inner-text'>services</span></div>
+        <div className='service-list'>
         <div className='service-container-detailed'>
           <div className='service-card'>
             <div className='svg-container'>
@@ -69,10 +70,11 @@ export default function Services() {
         </div>
       </div>
       <div className='contact-button'>
-        <Button>
+      <Button>
           <a href='/contact'>Contact us</a>
         </Button>
       </div>
+      </section>
     </div>
   );
 }
