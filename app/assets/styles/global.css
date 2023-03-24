@@ -58,13 +58,14 @@ header .container {
 
 button {
   border: none;
-  padding: 10px 20px;
+  padding: 1rem 1.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 1.5rem;
+  font-size: 1rem;
 }
 
 button a {
@@ -181,4 +182,9 @@ section {
   content: "";
   display: table;
   clear: both;
+}
+
+.contact-detail-container {
+  display: flex;
+  gap: 1.5rem;
 }
