@@ -8,7 +8,7 @@ type Props = {
 
 export default function Button({ children, className = '', type = 'primary' }: Props) {
   return (
-    <button className={`button ${type} ${className}`}>
+    <button className={`${type} ${className}`}>
       {children}
     </button>
   );

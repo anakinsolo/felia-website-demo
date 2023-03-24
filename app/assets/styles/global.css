@@ -188,3 +188,52 @@ section {
   display: flex;
   gap: 1.5rem;
 }
+
+.input-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  padding: 10px;
+  row-gap: 16px;
+}
+
+.input-item {
+  font-size: 16px;
+  text-align: center;
+}
+
+.mid {
+ display: grid;
+ grid-template-columns: auto auto;
+ column-gap: 16px;
+}
+
+.input-container input {
+	border: 1px solid #3C4850;
+  width: 100%;
+  border-radius: 26.5px;
+  height: 100%;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.input-container input::placeholder {
+  color: white;
+  padding: 1rem;
+}
+
+
+.input-container textarea {
+	border: 1px solid #3C4850;
+  width: 100%;
+  border-radius: 26.5px;
+  height: 100%;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.input-container textarea::placeholder {
+  color: white;
+  padding: 1rem;
+}
