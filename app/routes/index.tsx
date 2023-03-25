@@ -27,7 +27,7 @@ export default function Index() {
           <Button>
             <a href='/contact'>Contact us</a>
           </Button>
-          <Button type='secondary'>
+          <Button buttonType='secondary'>
             <a href='/our-services'>Our services</a>
           </Button>
         </div>

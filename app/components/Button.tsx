@@ -1,14 +1,15 @@
 import type { ReactNode } from 'react';
 
 type Props = {
-  children: ReactNode,
+  children?: ReactNode,
   className?: string,
-  type?: 'primary' | 'secondary',
+  buttonType?: 'primary' | 'secondary',
+  actionType?: 'submit' | 'reset' | 'button'
 }
 
-export default function Button({ children, className = '', type = 'primary' }: Props) {
+export default function Button({ children, className = '', buttonType = 'primary', actionType = 'button' }: Props) {
   return (
-    <button className={`${type} ${className}`}>
+    <button className={`${buttonType} ${className}`} type={`${actionType}`}>
       {children}
     </button>
   );

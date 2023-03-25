@@ -14,6 +14,7 @@ import stylesheet from './assets/styles/global.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
+  { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 ];
 
