@@ -37,8 +37,8 @@ export default function ContactSection() {
             <div className="input-item bottom">
   	          <textarea className='contact-input' id='message' name='message' rows={10} cols={50} placeholder='Leave us a message*' required></textarea>
             </div>
-            <Button actionType='submit'>Submit</Button>
           </div>
+          <Button actionType='submit'>Submit</Button>
         </Form>
       </div>
     </div>
