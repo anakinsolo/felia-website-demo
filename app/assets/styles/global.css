@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: auto;
+  margin: 0.25rem auto;
   max-width: 100%;
   font-family: 'Montserrat';
   background: #15202D;
