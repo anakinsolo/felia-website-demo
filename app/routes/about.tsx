@@ -37,9 +37,9 @@ export default function Team() {
             })
           }
         </div>
-        <div className='contact-section'>
-          <ContactSection />
-        </div>
+      </section>
+      <section className='contact-section'>
+        <ContactSection />
       </section>
     </div>
   );
