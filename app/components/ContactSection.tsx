@@ -14,7 +14,7 @@ export default function ContactSection() {
             <a href='https://www.facebook.com/felia.fi/' target='_blank' rel='noopener noreferrer'>
               <i className='fa fa-facebook-square' aria-hidden='true'></i>
             </a>
-            <a href='' target='_blank' rel='noopener noreferrer'>
+            <a href='/' target='_blank' rel='noopener noreferrer'>
               <i className='fa fa-linkedin-square' aria-hidden='true'></i>
             </a>
           </div>

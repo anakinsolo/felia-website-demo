@@ -10,9 +10,9 @@ export default function Header() {
         <div className='menu'>
           <ul>
             <li><a href='/'>Home</a></li>
-            <li><a href='/our-services'>Services</a></li>
-            <li><a href='/our-team'>Our team</a></li>
-            <li><a href='/our-customers'>Customer stories</a></li>
+            <li><a href='/services'>Services</a></li>
+            <li><a href='/about'>Our team</a></li>
+            <li><a href='/customers'>Customer stories</a></li>
           </ul>
         </div>
         <Button>

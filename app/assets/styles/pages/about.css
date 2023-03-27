@@ -1,0 +1,31 @@
+.about-page {
+  display: grid;
+  gap: 3rem;
+}
+
+.about-page .team-list {
+  display: grid;
+  gap: 3rem;
+}
+
+.member .left-container {
+  float: left;
+  width: 60%;
+}
+
+.member .right-container {
+  float: left;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.member .member-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.member img {
+  max-width: 300px;
+  max-height: 300px;
+}
