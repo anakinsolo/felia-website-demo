@@ -31,9 +31,7 @@ export default function Header() {
             <Link to='/' className='icon' onClick={testFunction}><i className='fa fa-bars'/></Link>
           </nav>
         </div>
-        <Button>
-          <a href="#contact-section">Contact us</a>
-        </Button>
+        <Button label='Contact us' to='#contact-section' className='primary' />
       </div>
     </header>
   );

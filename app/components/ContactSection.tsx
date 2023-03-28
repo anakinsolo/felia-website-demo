@@ -1,9 +1,14 @@
 import { Form } from '@remix-run/react';
 import Button from './Button';
+import stylesheet from '~/assets/styles/components/contact-section.css';
+
+export const links = [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export default function ContactSection() {
   return (
-    <div className='row'>
+    <div id='contact-section' className='row'>
       <div className='contact-info'>
         <div className='title'>Get in <span className='inner-text'>touch</span></div>
         <div className='title small'>with our <span className='inner-text'>team</span></div>
@@ -38,7 +43,7 @@ export default function ContactSection() {
   	          <textarea className='contact-input' id='message' name='message' rows={10} cols={50} placeholder='Leave us a message*' required></textarea>
             </div>
           </div>
-          <Button actionType='submit'>Submit</Button>
+          <Button label='Submit' className='primary submit'/>
         </Form>
       </div>
     </div>

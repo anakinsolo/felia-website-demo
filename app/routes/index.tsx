@@ -2,10 +2,11 @@ import Button from '~/components/Button';
 import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 import stylesheet from '~/assets/styles/pages/home.css';
 import type { LinksFunction } from '@remix-run/node';
-import ContactSection from '~/components/ContactSection';
+import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
+  ...contactSectionStylesheet
 ];
 
 export default function Index() {
@@ -24,12 +25,8 @@ export default function Index() {
           your ideas to life and help you succeed online.
         </div>
         <div className='hero-button'>
-          <Button>
-            <a href='/contact'>Contact us</a>
-          </Button>
-          <Button buttonType='secondary'>
-            <a href='/our-services'>Our services</a>
-          </Button>
+          <Button label='Contact us' to='#contact-section' className='primary' />
+          <Button label='Our services' to='/services' className='secondary' />
         </div>
       </section>
       <section className='service-section'>

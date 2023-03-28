@@ -1,10 +1,11 @@
 import type { LinksFunction } from '@remix-run/node';
-import ContactSection from '~/components/ContactSection';
+import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 import stylesheet from '~/assets/styles/pages/about.css';
 import Member from '~/components/Member';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
+  ...contactSectionStylesheet
 ];
 
 export default function Team() {

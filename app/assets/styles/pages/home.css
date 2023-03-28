@@ -7,3 +7,38 @@
   gap: 3rem;
 
 }
+
+.hero-button {
+  display: flex;
+  gap: 1rem;
+}
+
+.about-titles {
+  width: 50%;
+  float: left;
+  display: grid;
+  gap: 3rem;
+}
+
+.about-content {
+  width: 50%;
+  float: left;
+  display: grid;
+  gap: 3rem;
+}
+
+.service-section {
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.service-container {
+  grid-column: span 2;
+}
+
+.service-container .description {
+  text-align: center;
+}

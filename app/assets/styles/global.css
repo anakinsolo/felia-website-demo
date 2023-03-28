@@ -106,23 +106,23 @@ header .container .logo svg {
   }
 }
 
-
-button {
-  border: none;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  text-decoration: none;
+.button {
+  all: unset;
   display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
   border-radius: 1.5rem;
-  font-size: 1rem;
-  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-button a {
-  text-decoration: none;
-  color: white;
+.button.submit {
+  padding: 0.5rem 2rem;
+  margin: 1rem 0px;
 }
 
 .primary {
@@ -161,14 +161,6 @@ section {
   padding-bottom: 4.5rem;
 }
 
-.service-section {
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 3rem;
-}
-
 .service-list {
   display: grid;
   gap: 1rem;
@@ -181,18 +173,10 @@ section {
   }
  }
 
-.service-container {
-  grid-column: span 2;
-}
-
 .service-card {
   width: 100%;
   display: grid;
   gap: 1.5rem;
-}
-
-.service-container .description {
-  text-align: center;
 }
 
 .svg-container {
@@ -203,99 +187,8 @@ section {
   align-items: center;
 }
 
-.about-titles {
-  width: 50%;
-  float: left;
-  display: grid;
-  gap: 3rem;
-}
-
-.about-content {
-  width: 50%;
-  float: left;
-  display: grid;
-  gap: 3rem;
-}
-
-
-.contact-info {
-  float: left;
-  width: 50%;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.contact-form {
-  float: left;
-  width: 50%;
-}
-
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.contact-detail-container {
-  display: flex;
-  gap: 4rem;
-}
-
-.input-container {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  padding: 10px;
-  row-gap: 16px;
-}
-
-.input-item {
-  font-size: 16px;
-  text-align: center;
-}
-
-.mid {
- display: grid;
- grid-template-columns: auto auto;
- column-gap: 16px;
-}
-
-.input-container input {
-	border: 1px solid #3C4850;
-  width: 100%;
-  border-radius: 26.5px;
-  height: 100%;
-  background: transparent;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.input-container input::placeholder {
-  color: white;
-  padding: 1rem;
-}
-
-
-.input-container textarea {
-	border: 1px solid #3C4850;
-  width: 100%;
-  border-radius: 26.5px;
-  height: 100%;
-  background: transparent;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.input-container textarea::placeholder {
-  color: white;
-  padding: 1rem;
-}
-
-.social-media-container {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-media-container i {
-  font-size: 1.5rem;
-  color: white;
 }
