@@ -13,6 +13,16 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 480px) {
+  .hero-section .title, .hero-section .hero-content {
+    text-align: center;
+  }
+
+  .hero-button {
+    justify-content: center;
+  }
+} 
+
 .about-titles {
   width: 50%;
   float: left;
@@ -28,17 +38,48 @@
 }
 
 .service-section {
-  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 3rem;
 }
 
-.service-container {
+.service-section .service-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.service-section .service-container {
   grid-column: span 2;
 }
 
 .service-container .description {
   text-align: center;
 }
+
+.service-container .service-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .service-section .title {
+    text-align: center;
+  }
+
+  .service-section .service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .service-section .service-container {
+    grid-column: unset;
+    justify-content: center;
+  }
+}
+
