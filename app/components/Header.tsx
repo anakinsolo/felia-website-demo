@@ -35,8 +35,10 @@ export default function Header() {
             <Link to='/customers'>Customer stories</Link>
           </nav>
         </div>
-        <Button label='Contact us' to='#contact-section' className='primary' />
-        <Button label='fa fa-bars' className='icon' isIcon onClick={testFunction}></Button>
+        <div className='button-groups'>
+          <Button label='Contact us' to='#contact-section' className='primary' />
+          <Button label='fa fa-bars' className='icon' isIcon onClick={testFunction}></Button>
+        </div>
       </div>
     </header>
   );
