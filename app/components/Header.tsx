@@ -1,6 +1,11 @@
 import { Link } from '@remix-run/react';
 import Button from './Button';
 import SvgLogo from './icons/Logo';
+import stylesheet from '~/assets/styles/components/header.css';
+
+export const links = [
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export default function Header() {
   function testFunction(): void {
@@ -18,7 +23,7 @@ export default function Header() {
   
   return (
     <header>
-      <div className='container'>
+      <div className='container header-container'>
         <div className='logo'>
           <SvgLogo />
         </div>
@@ -28,10 +33,10 @@ export default function Header() {
             <Link to='/services'>Services</Link>
             <Link to='/about'>Our team</Link>
             <Link to='/customers'>Customer stories</Link>
-            <Link to='/' className='icon' onClick={testFunction}><i className='fa fa-bars'/></Link>
           </nav>
         </div>
         <Button label='Contact us' to='#contact-section' className='primary' />
+        <Button label='fa fa-bars' className='icon' isIcon onClick={testFunction}></Button>
       </div>
     </header>
   );
