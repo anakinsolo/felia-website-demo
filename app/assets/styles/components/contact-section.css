@@ -72,3 +72,55 @@
   color: white;
   padding: 1rem;
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact-detail-container {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-section.row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .contact-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-section.row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}

@@ -66,6 +66,41 @@
   justify-items: center;
 }
 
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .service-section .service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .service-section .service-container {
+    grid-column: unset;
+    justify-content: center;
+  }
+
+  .about-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-titles {
+    width: 100%;
+    float: left;
+    display: grid;
+    gap: 3rem;
+  }
+  
+  .about-content {
+    width: 100%;
+    float: left;
+    display: grid;
+    gap: 3rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .service-section .title {
     text-align: center;
@@ -81,5 +116,27 @@
     grid-column: unset;
     justify-content: center;
   }
+
+  .about-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-titles {
+    width: 100%;
+    float: left;
+    display: grid;
+    gap: 3rem;
+  }
+  
+  .about-content {
+    width: 100%;
+    float: left;
+    display: grid;
+    gap: 3rem;
+  }
 }
+
 

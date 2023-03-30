@@ -8,7 +8,7 @@ export const links = [
 
 export default function ContactSection() {
   return (
-    <div id='contact-section' className='row'>
+    <div id='contact-section' className='contact-section row'>
       <div className='contact-info'>
         <div className='title'>Get in <span className='inner-text'>touch</span></div>
         <div className='title small'>with our <span className='inner-text'>team</span></div>
