@@ -127,13 +127,12 @@ header {
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
   header {
-    height: 2.5rem;
   }
 }
 
 
 @media screen and (max-width: 600px) {
   header .logo svg {
-    max-width: 4rem;
+    /* max-width: 4rem; */
   }
 }
