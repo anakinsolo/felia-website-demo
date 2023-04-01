@@ -31,9 +31,7 @@ export default function Team() {
           {
             memberList.map((member) => {
               return (
-                <div className='team-list-item' key={member.id}>
-                  <Member key={member.id} name={member.name} position={member.position} description={member.description} />
-                </div>
+                <Member key={member.id} name={member.name} position={member.position} description={member.description} />
               );
             })
           }
