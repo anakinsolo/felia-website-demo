@@ -8,8 +8,15 @@
   gap: 1.5rem;
 }
 
+.service-page .service-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .service-container-detailed {
-  grid-column: span 6;
+  flex-basis: calc(50% - 0.5rem);
+  width: 100%;
   background: #3C4850;
   border-radius: 1rem;
   min-height: 50ex;
@@ -34,4 +41,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .service-container-detailed {
+    flex-basis: calc(100% - 0.5rem);
+  }
 }
