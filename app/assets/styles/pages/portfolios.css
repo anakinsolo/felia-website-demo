@@ -1,0 +1,11 @@
+.portfolio-list {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-page {
+    text-align: center;
+  }
+}
