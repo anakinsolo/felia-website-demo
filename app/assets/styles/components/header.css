@@ -52,6 +52,10 @@ header {
   display: none;
 }
 
+.header-container .icon.hidden {
+  display: none;
+}
+
 .header-container .button-groups {
   display: flex;
   flex: 33.33%;
