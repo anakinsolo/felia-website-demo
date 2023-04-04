@@ -10,4 +10,4 @@ services:
       - ./:/var/www/html
     expose:
       - "3000"
-    command: "npm run build && npm start"
+    command: "npm i && npm run dev" #@TODO: Code pipeline or here?
