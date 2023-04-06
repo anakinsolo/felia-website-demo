@@ -38,39 +38,40 @@
 }
 
 .mid {
- display: grid;
- grid-template-columns: auto auto;
- column-gap: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 16px;
 }
 
 .input-container input {
-	border: 1px solid #3C4850;
+  color: white;
+  padding: 0 1rem;
+  border: 1px solid #3C4850;
   width: 100%;
-  border-radius: 26.5px;
-  height: 100%;
+  border-radius: 1rem;
   background: transparent;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .input-container input::placeholder {
   color: white;
-  padding: 1rem;
 }
 
 .input-container textarea {
-	border: 1px solid #3C4850;
+  color: white;
+  padding: 0 1rem;
+  border: 1px solid #3C4850;
   width: 100%;
-  border-radius: 26.5px;
+  border-radius: 1rem;
   height: 100%;
   background: transparent;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .input-container textarea::placeholder {
   color: white;
-  padding: 1rem;
 }
 
 

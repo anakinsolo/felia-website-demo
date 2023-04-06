@@ -1,9 +1,17 @@
 import type { ActionArgs } from '@remix-run/node';
+import { redirect } from '@remix-run/node';
+
+export async function loader() {
+  return redirect('/');
+}
 
 export async function action({ request }: ActionArgs) {
-  console.log(request);
   let data = await request.formData();
-  return {};
+  console.log(data.get('name'));
+  console.log(data.get('phone'));
+  console.log(data.get('email'));
+  console.log(data.get('message'));
+  return null;
 }
 
 

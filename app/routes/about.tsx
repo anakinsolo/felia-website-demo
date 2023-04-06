@@ -1,4 +1,5 @@
 import type { LinksFunction } from '@remix-run/node';
+import { redirect } from '@remix-run/node';
 import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 import stylesheet from '~/assets/styles/pages/about.css';
 import Member from '~/components/Member';
