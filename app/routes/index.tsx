@@ -1,15 +1,37 @@
 import Button from '~/components/Button';
 import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 import stylesheet from '~/assets/styles/pages/home.css';
-import type { LinksFunction } from '@remix-run/node';
+import type { ActionArgs, LinksFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
+import type { FormValues } from '~/services/mailservice.server';
+import { sendMail } from '~/services/mailservice.server';
+import FlashMessage, { links as flashMessageStyles } from '~/components/FlashMessage';
+import { useActionData } from '@remix-run/react';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
-  ...contactSectionStylesheet
+  ...contactSectionStylesheet,
+  ...flashMessageStyles
 ];
 
+export async function action({ request }: ActionArgs) {
+  const formData = await request.formData();
+  const values = Object.fromEntries(formData);
+  const data: FormValues = {
+    name: values.name,
+    email: values.email,
+    phone: values.phone,
+    message: values.message
+  };
+
+  const { message, error } = sendMail(data);
+  return json({ message, error }, { status: error ? 500 : 200 });
+}
+
 export default function Index() {
+  const data = useActionData();
+
   return (
     <div className='container home'>
       <section className='hero-section'>
@@ -37,7 +59,7 @@ export default function Index() {
               <div className='svg-container'>
                 <DevelopmentLogo />
               </div>
-              <div className='description'>Custom Web<br/>Development</div>
+              <div className='description'>Custom Web<br />Development</div>
             </div>
           </div>
           <div className='service-container'>
@@ -45,7 +67,7 @@ export default function Index() {
               <div className='svg-container'>
                 <EcomLogo />
               </div>
-              <div className='description'>E-commerce<br/>Development</div>
+              <div className='description'>E-commerce<br />Development</div>
             </div>
           </div>
           <div className='service-container'>
@@ -55,13 +77,13 @@ export default function Index() {
               </div>
               <div className='description'>UI & UX Design</div>
             </div>
-          </div>          
+          </div>
           <div className='service-container'>
             <div className='service-card'>
               <div className='svg-container'>
                 <CmsLogo />
               </div>
-              <div className='description'>Content Management<br/>Systems</div>
+              <div className='description'>Content Management<br />Systems</div>
             </div>
           </div>
           <div className='service-container'>
@@ -69,7 +91,7 @@ export default function Index() {
               <div className='svg-container'>
                 <SeoLogo />
               </div>
-              <div className='description'>Search Engine<br/>Optimization</div>
+              <div className='description'>Search Engine<br />Optimization</div>
             </div>
           </div>
           <div className='service-container'>
@@ -77,7 +99,7 @@ export default function Index() {
               <div className='svg-container'>
                 <MaintainanceLogo />
               </div>
-              <div className='description'>Website<br/>Maintenance</div>
+              <div className='description'>Website<br />Maintenance</div>
             </div>
           </div>
         </div>
@@ -99,6 +121,7 @@ export default function Index() {
       <section className='contact-section'>
         <ContactSection />
       </section>
+      <FlashMessage message={data?.message} error={data?.error} />
     </div>
   );
 }

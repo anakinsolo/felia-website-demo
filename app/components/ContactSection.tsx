@@ -26,24 +26,24 @@ export default function ContactSection() {
         </div>
       </div>
       <div className='contact-form'>
-        <Form method='post' action='/contact'>
+        <Form method='post' reloadDocument >
           <div className="input-container">
             <div className="input-item top">
-  	          <input className='contact-input' type='text' id='name' name='name' placeholder='Your name*' required />
+              <input className='contact-input' type='text' id='name' name='name' placeholder='Your name*' required />
             </div>
             <div className="input-item mid">
-  	          <div className="input-item">
-    	          <input className='contact-input' type='tel' id='phone' name='phone' placeholder='Your phone*' required />
+              <div className="input-item">
+                <input className='contact-input' type='tel' id='phone' name='phone' placeholder='Your phone*' required />
               </div>
               <div className="input-item">
-    	          <input className='contact-input' type='email' id='email' name='email' placeholder='Your email*' required />
+                <input className='contact-input' type='email' id='email' name='email' placeholder='Your email*' required />
               </div>
-            </div>  
+            </div>
             <div className="input-item bottom">
-  	          <textarea className='contact-input' id='message' name='message' rows={10} cols={50} placeholder='Leave us a message*' required></textarea>
+              <textarea className='contact-input' id='message' name='message' rows={10} cols={50} placeholder='Leave us a message*' required></textarea>
             </div>
           </div>
-          <Button label='Submit' className='primary submit'/>
+          <Button label='Submit' className='primary submit' />
         </Form>
       </div>
     </div>

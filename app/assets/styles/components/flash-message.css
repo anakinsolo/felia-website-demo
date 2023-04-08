@@ -1,0 +1,35 @@
+.flash-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  /* Set initial opacity to 1 */
+  transform: translateX(0);
+  /* Set initial transform */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  /* Add transition to the transform property */
+}
+
+.flash-message.success {
+  border: 1px solid green;
+  background-color: #e0ffe0;
+  /* Solid success background color */
+}
+
+.flash-message.error {
+  border: 1px solid red;
+  background-color: #ffe0e0;
+  /* Solid error background color */
+}
+
+.flash-message.hidden {
+  opacity: 0;
+  /* Set opacity to 0 when hidden */
+  transform: translateX(100%);
+  /* Move the element out of view */
+}
