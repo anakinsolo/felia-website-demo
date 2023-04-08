@@ -43,9 +43,8 @@ export async function sendMail(values: FormValues): Promise<Result> {
 
   try {
     await transporter.sendMail(mailData);
+    return { message: 'Email sent successfully' };
   } catch (error) {
     return { message: 'Something went wrong, please try again', error: error.message };
   }
-
-  return { message: 'Email sent successfully' };
 }
