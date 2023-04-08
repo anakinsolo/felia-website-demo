@@ -24,7 +24,7 @@ export async function action({ request }: ActionArgs) {
     message: values.message
   };
 
-  const { message, error } = sendMail(data);
+  const { message, error } = await sendMail(data);
   return json({ message, error }, { status: error ? 500 : 200 });
 }
 

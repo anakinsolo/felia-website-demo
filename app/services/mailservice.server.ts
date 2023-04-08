@@ -10,7 +10,7 @@ interface Result {
   error?: string;
 }
 
-export function sendMail(values: FormValues): Result {
+export async function sendMail(values: FormValues): Promise<Result> {
   let nodemailer = require('nodemailer');
   if (!process.env.SEND_MAIL_PROVIDER
     || !process.env.SEND_MAIL_PROVIDER_HOST
@@ -41,13 +41,11 @@ export function sendMail(values: FormValues): Result {
     html: $html,
   };
 
-  const result = transporter.sendMail(mailData, function (err, info) {
-    if (err) {
-      return { message: 'Something went wrong', error: err };
-    }
+  try {
+    await transporter.sendMail(mailData);
+  } catch (error) {
+    return { message: 'Something went wrong, please try again', error: error.message };
+  }
 
-    return { message: 'Message sent successfully' };
-  });
-
-  return result;
+  return { message: 'Email sent successfully' };
 }
