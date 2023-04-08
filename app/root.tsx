@@ -1,4 +1,5 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -6,11 +7,32 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from '@remix-run/react';
 import type { ReactNode } from 'react';
 import Footer from './components/Footer';
 import Header, { links as headerStylesheet } from './components/Header';
 import stylesheet from './assets/styles/global.css';
+import { storyblokInit, apiPlugin } from '@storyblok/react';
+
+const isServer = typeof window === 'undefined';
+const accessToken = isServer
+  ? process.env.STORYBLOK_PREVIEW_TOKEN
+  : window.env.STORYBLOK_PREVIEW_TOKEN;
+
+storyblokInit({
+  accessToken,
+  use: [apiPlugin],
+  components: {},
+});
+
+export async function loader() {
+  return json({
+    env: {
+      STORYBLOK_PREVIEW_TOKEN: process.env.STORYBLOK_PREVIEW_TOKEN,
+    },
+  });
+};
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -25,7 +47,8 @@ export const meta: MetaFunction = () => ({
   viewport: 'initial-scale=1',
 });
 
-const RootLayout = ({ children }: {children: ReactNode}) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
+  const { env } = useLoaderData();
   return (
     <html lang="en">
       <head>
@@ -34,6 +57,11 @@ const RootLayout = ({ children }: {children: ReactNode}) => {
       </head>
       <body>
         {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.env = ${JSON.stringify(env)}`,
+          }}
+        />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
