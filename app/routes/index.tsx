@@ -1,19 +1,36 @@
 import Button from '~/components/Button';
 import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 import stylesheet from '~/assets/styles/pages/home.css';
-import type { ActionArgs, LinksFunction } from '@remix-run/node';
+import type { ActionArgs, LinksFunction, LoaderArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 import type { FormValues } from '~/services/mailservice.server';
 import { sendMail } from '~/services/mailservice.server';
 import FlashMessage, { links as flashMessageStyles } from '~/components/FlashMessage';
-import { useActionData } from '@remix-run/react';
+import { useActionData, useLoaderData } from '@remix-run/react';
+import type { ISbStoriesParams } from '@storyblok/react';
+import {
+  getStoryblokApi,
+  useStoryblokState,
+  StoryblokComponent
+} from '@storyblok/react';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
   ...contactSectionStylesheet,
   ...flashMessageStyles
 ];
+
+export const loader = async ({ params }: LoaderArgs) => {
+  const slug = params.slug || 'home';
+  let sbParams: ISbStoriesParams = {
+    version: 'draft',
+  };
+
+  let { data } = await getStoryblokApi().get(`cdn/stories/${slug}`, sbParams);
+
+  return json(data?.story);
+};
 
 export async function action({ request }: ActionArgs) {
   const formData = await request.formData();
@@ -31,10 +48,13 @@ export async function action({ request }: ActionArgs) {
 
 export default function Index() {
   const data = useActionData();
+  let story = useLoaderData();
+  story = useStoryblokState(story);
 
   return (
     <div className='container home'>
-      <section className='hero-section'>
+      <StoryblokComponent blok={story.content} />
+      {/* <section className='hero-section'>
         <div className='title'>
           Bringing ideas to life: <br />
           <span className='inner-text'>Digital solutions</span> <br />
@@ -47,10 +67,10 @@ export default function Index() {
           your ideas to life and help you succeed online.
         </div>
         <div className='hero-button'>
-          <Button label='Contact us' to='#contact-section' className='primary' />
+          <Button label='Contact us' to='#  ' className='primary' />
           <Button label='Our services' to='/services' className='secondary' />
         </div>
-      </section>
+      </section> */}
       <section className='service-section'>
         <div className='title'>Our <span className='inner-text'>services</span></div>
         <div className='service-list'>

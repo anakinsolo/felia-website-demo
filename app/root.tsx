@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import Header, { links as headerStylesheet } from './components/Header';
 import stylesheet from './assets/styles/global.css';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
+import Page from './components/Page';
+import Hero from './components/Hero';
 
 const isServer = typeof window === 'undefined';
 const accessToken = isServer
@@ -23,7 +25,10 @@ const accessToken = isServer
 storyblokInit({
   accessToken,
   use: [apiPlugin],
-  components: {},
+  components: {
+    page: Page,
+    hero: Hero
+  },
 });
 
 export async function loader() {
