@@ -14,6 +14,7 @@ import {
   useStoryblokState,
   StoryblokComponent
 } from '@storyblok/react';
+import ServiceContainer from '~/components/ServiceContainer';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -54,76 +55,6 @@ export default function Index() {
   return (
     <div className='container home'>
       <StoryblokComponent blok={story.content} />
-      {/* <section className='hero-section'>
-        <div className='title'>
-          Bringing ideas to life: <br />
-          <span className='inner-text'>Digital solutions</span> <br />
-          made easy
-        </div>
-        <div className='hero-content'>
-          Empowering businesses to succeed in the digital world. We provide a <br />
-          complete solution for website and e-commerce design, development, <br />
-          hosting, and maintenance, all backed by expert consultancy. Let us bring <br />
-          your ideas to life and help you succeed online.
-        </div>
-        <div className='hero-button'>
-          <Button label='Contact us' to='#  ' className='primary' />
-          <Button label='Our services' to='/services' className='secondary' />
-        </div>
-      </section> */}
-      <section className='service-section'>
-        <div className='title'>Our <span className='inner-text'>services</span></div>
-        <div className='service-list'>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <DevelopmentLogo />
-              </div>
-              <div className='description'>Custom Web<br />Development</div>
-            </div>
-          </div>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <EcomLogo />
-              </div>
-              <div className='description'>E-commerce<br />Development</div>
-            </div>
-          </div>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <DesignLogo />
-              </div>
-              <div className='description'>UI & UX Design</div>
-            </div>
-          </div>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <CmsLogo />
-              </div>
-              <div className='description'>Content Management<br />Systems</div>
-            </div>
-          </div>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <SeoLogo />
-              </div>
-              <div className='description'>Search Engine<br />Optimization</div>
-            </div>
-          </div>
-          <div className='service-container'>
-            <div className='service-card'>
-              <div className='svg-container'>
-                <MaintainanceLogo />
-              </div>
-              <div className='description'>Website<br />Maintenance</div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className='about-section row'>
         <div className='about-titles'>
           <div className='title'>Who <span className='inner-text'>we</span> are</div>

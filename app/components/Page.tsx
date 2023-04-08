@@ -1,7 +1,6 @@
 import { storyblokEditable, StoryblokComponent } from '@storyblok/react';
 
 const Page = ({ blok }) => {
-  console.log('Page blok:', blok);
   return (
     <>
       {

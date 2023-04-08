@@ -1,9 +1,7 @@
-import { storyblokEditable } from '@storyblok/react';
+import { storyblokEditable, StoryblokComponent } from '@storyblok/react';
 import Button from './Button';
 
 const Hero = ({ blok }) => {
-  console.log('Hero blok:', blok);
-  console.log('Hero content:',);
   return (
     <section className='hero-section'>
       <div className='title'>
@@ -18,8 +16,13 @@ const Hero = ({ blok }) => {
         {blok.content_4}
       </div>
       <div className='hero-button'>
-        <Button label='Contact us' to='#  ' className='primary' />
-        <Button label='Our services' to='/services' className='secondary' />
+        {
+          blok.buttons?.map((button) => {
+            return (
+              <StoryblokComponent blok={button} key={button._uid} />
+            );
+          })
+        }
       </div>
     </section>
   );

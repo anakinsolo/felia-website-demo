@@ -16,6 +16,9 @@ import stylesheet from './assets/styles/global.css';
 import { storyblokInit, apiPlugin } from '@storyblok/react';
 import Page from './components/Page';
 import Hero from './components/Hero';
+import StoryblokButton from './components/StoryblokButton';
+import Section from './components/Section';
+import Title from './components/Title';
 
 const isServer = typeof window === 'undefined';
 const accessToken = isServer
@@ -27,7 +30,10 @@ storyblokInit({
   use: [apiPlugin],
   components: {
     page: Page,
-    hero: Hero
+    hero: Hero,
+    button: StoryblokButton,
+    section: Section,
+    title: Title,
   },
 });
 
