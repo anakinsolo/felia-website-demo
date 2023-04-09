@@ -35,7 +35,7 @@ export default function Header() {
           <nav>
             <Link to='/'>Home</Link>
             <Link to='/services'>Services</Link>
-            <Link to='/about'>Our team</Link>
+            {/* <Link to='/about'>Our team</Link> */}
             <Link to='/customers'>Customer stories</Link>
           </nav>
         </div>

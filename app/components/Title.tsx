@@ -1,5 +1,4 @@
 export default function Title({ blok }) {
-  console.log('title:', blok);
   return (
     <div className='title'>{blok.title}
       {blok.inner_text &&
