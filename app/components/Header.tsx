@@ -25,6 +25,15 @@ export default function Header() {
     }
   }
 
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const targetElement = document.querySelector('#about-section');
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header>
       <div className='container header-container'>
@@ -35,7 +44,7 @@ export default function Header() {
           <nav>
             <Link to='/'>Home</Link>
             <Link to='/services'>Services</Link>
-            <Link to='/about'>Our team</Link>
+            <Link to='#about-section' onClick={handleClick}>About us</Link>
             <Link to='/customers'>Customer stories</Link>
           </nav>
         </div>

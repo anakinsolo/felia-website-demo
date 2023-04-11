@@ -1,5 +1,3 @@
-import Button from '~/components/Button';
-import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 import stylesheet from '~/assets/styles/pages/home.css';
 import type { ActionArgs, LinksFunction, LoaderArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
@@ -14,7 +12,8 @@ import {
   useStoryblokState,
   StoryblokComponent
 } from '@storyblok/react';
-import ServiceContainer from '~/components/ServiceContainer';
+import AboutSection from '~/components/AboutSection';
+
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -55,22 +54,6 @@ export default function Index() {
   return (
     <div className='container home'>
       <StoryblokComponent blok={story.content} />
-      <section className='about-section'>
-        <div className='row'>
-          <div className='about-titles'>
-            <div className='title'>Who <span className='inner-text'>we</span> are</div>
-            <div className='title small'>We <span className='inner-text'>help</span> you with your projects</div>
-          </div>
-          <div className='about-content'>
-            <div>
-              Founded in 2023, we are a team of dedicated professionals committed to providing exceptional service and cutting-edge technology to our clients. We specialize in designing, building, operating, and maintaining websites and web applications that add digital value to your business.
-            </div>
-            <div>
-              Our experienced consultants are highly skilled in e-commerce websites and can help you meet your deadlines, expand your current applications, or maintain your existing solutions.Simply leave us a message, and we'll get back to you within 1-2 business days.
-            </div>
-          </div>
-        </div>
-      </section>
       <section className='contact-section'>
         <ContactSection />
       </section>

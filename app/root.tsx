@@ -20,6 +20,7 @@ import StoryblokButton from './components/StoryblokButton';
 import Section from './components/Section';
 import Title from './components/Title';
 import ServiceList from './components/ServiceList';
+import AboutSection from './components/AboutSection';
 
 const isServer = typeof window === 'undefined';
 const accessToken = isServer
@@ -35,7 +36,8 @@ storyblokInit({
     button: StoryblokButton,
     section: Section,
     title: Title,
-    service_list: ServiceList
+    service_list: ServiceList,
+    about: AboutSection,
   },
 });
 
