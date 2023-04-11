@@ -1,7 +1,4 @@
-import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
-import ServiceContainer from './ServiceContainer';
 import { StoryblokComponent } from '@storyblok/react';
-import ServiceList from './ServiceList';
 
 export default function Section({ blok }) {
   return (

@@ -88,7 +88,7 @@
     text-align: center;
   }
 
-  .contact-section.row {
+  .contact-section .row {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -103,6 +103,11 @@
   .contact-form {
     width: 100%;
   }
+
+  .social-media-container {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -110,7 +115,7 @@
     text-align: center;
   }
 
-  .contact-section.row {
+  .contact-section .row {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -124,4 +129,6 @@
   .contact-form {
     width: 100%;
   }
+
+
 }
