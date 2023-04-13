@@ -81,7 +81,7 @@
     justify-content: center;
   }
 
-  .about-section {
+  .about-section .row {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     justify-content: center;
   }
 
-  .about-section {
+  .about-section .row {
     text-align: center;
     display: flex;
     flex-direction: column;
