@@ -130,5 +130,7 @@
     width: 100%;
   }
 
-
+  .social-media-container {
+    display: none;
+  }
 }

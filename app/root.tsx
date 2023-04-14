@@ -60,6 +60,8 @@ export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   title: 'Bringing ideas to life: Digital solutions made easy',
   viewport: 'initial-scale=1',
+  description: 'Felia Solutions, Felia Solutions Oy, Felia Website Design, Felia E-commerce Solutions, Felia Consulting, Felia Web Development, Felia Online Store Creation, Felia Website Solutions, Felia Custom Websites, Felia Web Design and Development Services',
+  keywords: 'Felia Solutions Oy provides professional website design and development services for businesses. We create custom websites and e-commerce sites to help you grow your online presence.',
 });
 
 const RootLayout = ({ children }: { children: ReactNode }) => {

@@ -16,12 +16,12 @@ export default function ContactSection() {
           <div>Email: hello@felia.fi</div>
           <div>Tel: (+358)50 357 7421</div>
           <div className='social-media-container'>
-            <a href='https://www.facebook.com/felia.fi/' target='_blank' rel='noopener noreferrer'>
+            <a href='https://www.facebook.com/felia.solutions.oy/' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
               <i className='fa fa-facebook-square' aria-hidden='true'></i>
             </a>
-            <a href='/' target='_blank' rel='noopener noreferrer'>
+            {/* <a href='/' target='_blank' rel='noopener noreferrer'>
               <i className='fa fa-linkedin-square' aria-hidden='true'></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
