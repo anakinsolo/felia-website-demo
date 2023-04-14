@@ -21,6 +21,7 @@ import Section from './components/Section';
 import Title from './components/Title';
 import ServiceList from './components/ServiceList';
 import AboutSection from './components/AboutSection';
+import WorkList from './components/WorkList';
 
 const isServer = typeof window === 'undefined';
 const accessToken = isServer
@@ -38,6 +39,7 @@ storyblokInit({
     title: Title,
     service_list: ServiceList,
     about: AboutSection,
+    work_list: WorkList,
   },
 });
 

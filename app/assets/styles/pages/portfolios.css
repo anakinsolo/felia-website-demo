@@ -1,7 +1,22 @@
+.portfolio-page {
+  display: grid;
+  gap: 3rem;
+}
+
 .portfolio-list {
   display: flex;
   gap: 4rem;
   flex-direction: column;
+}
+
+.portfolio-img img {
+  width: 100%;
+}
+
+.portfolio-info {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 4rem;
 }
 
 @media screen and (max-width: 768px) {

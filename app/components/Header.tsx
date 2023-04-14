@@ -45,7 +45,7 @@ export default function Header() {
             <Link to='/'>Home</Link>
             <Link to='/services'>Services</Link>
             <Link to='#about-section' onClick={handleClick}>About us</Link>
-            <Link to='/customers'>Customer stories</Link>
+            <Link to='/customers'>Our works</Link>
           </nav>
         </div>
         <div className='button-groups'>
