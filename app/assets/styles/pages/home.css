@@ -58,6 +58,10 @@
 
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    background-image: none;
+  }
+  
   .hero-section .title, .hero-section .hero-content {
     text-align: center;
   }
@@ -104,6 +108,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .hero-section {
+    background-image: none;
+  }
+
   .hero-section .title, .hero-section .hero-content {
     text-align: center;
   }
