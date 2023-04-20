@@ -8,9 +8,7 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
   title: 'Professional Web Development & E-commerce Services | Felia Solutions Oy',
-  viewport: 'initial-scale=1',
   description: 'Felia Solutions Oy offers top-notch web development, e-commerce solutions, and website maintenance services for small and medium-sized businesses. Let\'s grow your online presence together!',
   keywords: 'web development, web design, e-commerce solutions, website maintenance, content management systems, custom development, consultancy',
   canonical: 'https://www.felia.fi/services',
