@@ -14,7 +14,7 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => ({
-  title: 'Our customers | Felia Solutions Oy',
+  title: 'Our Customers | Felia Solutions Oy',
   description: 'Discover Felia Solutions Oy\'s satisfied customers and read their testimonials. Learn how our web development, e-commerce, and web design services have helped businesses grow their online presence.',
   keywords: 'satisfied customers, client testimonials, web development, e-commerce solutions, web design, website maintenance, content management systems, web hosting, custom development, consultancy, Shopify, Magento, small and medium-sized businesses, professional web services, responsive web design, online store',
   canonical: 'https://www.felia.fi/customers',
