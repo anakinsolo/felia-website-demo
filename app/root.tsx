@@ -60,10 +60,11 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'Bringing ideas to life: Digital solutions made easy',
+  title: 'Bringing ideas to life: Digital solutions made easy | Felia Solutions Oy',
   viewport: 'initial-scale=1',
   description: 'Felia Solutions, Felia Solutions Oy, Felia Website Design, Felia E-commerce Solutions, Felia Consulting, Felia Web Development, Felia Online Store Creation, Felia Website Solutions, Felia Custom Websites, Felia Web Design and Development Services',
-  keywords: 'Felia Solutions Oy provides professional website design and development services for businesses. We create custom websites and e-commerce sites to help you grow your online presence.',
+  keywords: 'web development, e-commerce solutions, web design, website maintenance, content management systems, web hosting, custom development, consultancy, Shopify, Magento, small and medium-sized businesses, professional web services, responsive web design, online store',
+  canonical: 'https://www.felia.fi/',
 });
 
 const RootLayout = ({ children }: { children: ReactNode }) => {

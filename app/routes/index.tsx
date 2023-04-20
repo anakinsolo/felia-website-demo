@@ -12,7 +12,6 @@ import {
   useStoryblokState,
   StoryblokComponent
 } from '@storyblok/react';
-import AboutSection from '~/components/AboutSection';
 
 
 export const links: LinksFunction = () => [

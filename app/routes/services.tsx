@@ -1,12 +1,20 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import stylesheet from '~/assets/styles/pages/services.css';
-import Button from '~/components/Button';
 import ServiceContainer from '~/components/ServiceContainer';
 import { CmsLogo, DesignLogo, DevelopmentLogo, EcomLogo, MaintainanceLogo, SeoLogo } from '~/components/icons';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
 ];
+
+export const meta: MetaFunction = () => ({
+  charset: 'utf-8',
+  title: 'Professional Web Development & E-commerce Services | Felia Solutions Oy',
+  viewport: 'initial-scale=1',
+  description: 'Felia Solutions Oy offers top-notch web development, e-commerce solutions, and website maintenance services for small and medium-sized businesses. Let\'s grow your online presence together!',
+  keywords: 'web development, web design, e-commerce solutions, website maintenance, content management systems, custom development, consultancy',
+  canonical: 'https://www.felia.fi/services',
+});
 
 
 export default function Services() {

@@ -1,5 +1,4 @@
-import { storyblokEditable, StoryblokComponent } from '@storyblok/react';
-import Button from './Button';
+import { StoryblokComponent } from '@storyblok/react';
 
 const Hero = ({ blok }) => {
   return (
