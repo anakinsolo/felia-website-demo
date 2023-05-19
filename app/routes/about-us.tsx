@@ -1,18 +1,34 @@
-import type { ActionArgs, LinksFunction } from '@remix-run/node';
+import type { ActionArgs, LinksFunction, LoaderArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 import stylesheet from '~/assets/styles/pages/about.css';
+import homeStylesheet from '~/assets/styles/pages/home.css';
 import Member from '~/components/Member';
 import type { FormValues } from '~/services/mailservice.server';
 import { sendMail } from '~/services/mailservice.server';
-import { useActionData } from '@remix-run/react';
+import { useActionData, useLoaderData } from '@remix-run/react';
 import FlashMessage, { links as flashMessageStyles } from '~/components/FlashMessage';
+import type { ISbStoriesParams } from '@storyblok/react';
+import { useStoryblokState } from '@storyblok/react';
+import { StoryblokComponent, getStoryblokApi } from '@storyblok/react';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
+  { rel: 'stylesheet', href: homeStylesheet },
   ...contactSectionStylesheet,
   ...flashMessageStyles
 ];
+
+export const loader = async ({ params }: LoaderArgs) => {
+  const slug = 'about-us';
+  let sbParams: ISbStoriesParams = {
+    version: 'draft',
+  };
+
+  let { data } = await getStoryblokApi().get(`cdn/stories/${slug}`, sbParams);
+
+  return json(data?.story);
+};
 
 export async function action({ request }: ActionArgs) {
   const formData = await request.formData();
@@ -29,7 +45,6 @@ export async function action({ request }: ActionArgs) {
 }
 
 export default function Team() {
-  const data = useActionData();
   const memberList = [
     {
       id: 1,
@@ -45,9 +60,13 @@ export default function Team() {
     }
   ];
 
+  const data = useActionData();
+  let story = useLoaderData();
+  story = useStoryblokState(story);
+
   return (
     <div className='container'>
-      <section className='about-page'>
+      {/* <section className='about-page'>
         <div className='title'>About <span className='inner-text'>us</span></div>
         <div className='team-list'>
           {
@@ -58,7 +77,8 @@ export default function Team() {
             })
           }
         </div>
-      </section>
+      </section> */}
+      <StoryblokComponent blok={story.content} />
       <section className='contact-section'>
         <ContactSection />
       </section>

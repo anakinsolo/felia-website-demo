@@ -25,12 +25,18 @@ export default function Header() {
     }
   }
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    const targetElement = document.querySelector('#about-section');
+  function getSlug(url: string) {
+    return new URL(url).pathname.match(/[^\/]+/g);
+  }
 
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (getSlug(window.location.href) === null) {
+      event.preventDefault();
+      const targetElement = document.querySelector('#about-section');
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -45,11 +51,11 @@ export default function Header() {
             <Link to='/'>Home</Link>
             <Link to='/services'>Services</Link>
             <Link to='/customers'>Our works</Link>
-            <Link to='/#about-section' onClick={handleClick}>About us</Link>
+            <Link to='/about-us' onClick={handleClick}>About us</Link>
           </nav>
         </div>
         <div className='button-groups'>
-          <Button label='Contact us' to='#contact-section' className='primary' />
+          <Button label='Contact us' to='/about-us#contact-section' className='primary' />
           <Button label={isMenuOpen ? 'fa fa-times' : 'fa fa-bars'} className='icon' isIcon onClick={toggleMenu} />
         </div>
       </div>
