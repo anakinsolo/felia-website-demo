@@ -69,14 +69,6 @@ body {
   background: #3C4850;
 }
 
-.footer {
-  display: grid;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 4.5rem;
-}
-
 .title {
   font-style: normal;
   font-size: 3.25rem;
@@ -114,4 +106,76 @@ section {
   content: "";
   display: table;
   clear: both;
+}
+
+.footer {
+  display: grid;
+  /* gap: 2rem; */
+  /* justify-content: center; */
+  align-items: center;
+  padding-bottom: 4.5rem;
+}
+
+.footer-row {
+  width: 33.3%;
+}
+
+.footer .svg-container {
+  float: left;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer .company-info {
+  float: left;
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer .info-certificate {
+  float: left;
+  display: grid;
+  justify-content: flex-end;
+}
+
+.footer .info-title {
+  font-size: 1.5rem;
+}
+
+.copy-right {
+  text-align: center;
+  padding-top: 8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-row {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer .footer-content {
+    display: grid;
+    gap: 4rem;
+  }
+
+  .footer .svg-container {
+    justify-content: center;
+  }
+
+  .footer .company-info {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer .info-certificate {
+    justify-content: center;
+  }
+
+  .footer .info-certificate a {
+    display: grid;
+    align-items: center;
+  }
 }
