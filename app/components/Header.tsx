@@ -55,7 +55,7 @@ export default function Header() {
           </nav>
         </div>
         <div className='button-groups'>
-          <Button label='Contact us' to='/about-us#contact-section' className='primary' />
+          <Link className='button primary' to='/about-us' onClick={handleClick}>Contact us</Link>
           <Button label={isMenuOpen ? 'fa fa-times' : 'fa fa-bars'} className='icon' isIcon onClick={toggleMenu} />
         </div>
       </div>

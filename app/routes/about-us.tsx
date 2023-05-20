@@ -7,7 +7,7 @@ import Member from '~/components/Member';
 import type { FormValues } from '~/services/mailservice.server';
 import { sendMail } from '~/services/mailservice.server';
 import { useActionData, useLoaderData } from '@remix-run/react';
-import FlashMessage, { links as flashMessageStyles } from '~/components/FlashMessage';
+import { links as flashMessageStyles } from '~/components/FlashMessage';
 import type { ISbStoriesParams } from '@storyblok/react';
 import { useStoryblokState } from '@storyblok/react';
 import { StoryblokComponent, getStoryblokApi } from '@storyblok/react';
@@ -60,7 +60,6 @@ export default function Team() {
     }
   ];
 
-  const data = useActionData();
   let story = useLoaderData();
   story = useStoryblokState(story);
 
@@ -82,7 +81,6 @@ export default function Team() {
       <section className='contact-section'>
         <ContactSection />
       </section>
-      <FlashMessage message={data?.message} error={data?.error} />
     </div>
   );
 }

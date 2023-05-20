@@ -1,8 +1,7 @@
 .flash-message {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 1rem;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0.25rem;
   border-radius: 5px;
   z-index: 1000;
   text-align: center;
@@ -16,15 +15,15 @@
 }
 
 .flash-message.success {
-  border: 1px solid green;
   background-color: #e0ffe0;
   /* Solid success background color */
+  color: #035F02;
 }
 
 .flash-message.error {
-  border: 1px solid red;
   background-color: #ffe0e0;
   /* Solid error background color */
+  color: #990000;
 }
 
 .flash-message.hidden {

@@ -12,7 +12,7 @@ export default function Footer() {
           <div className='info-content'>
             <div>Business ID: 3340263-9</div>
             <div>Email: hello@felia.fi</div>
-            <div>Tel: (+358)50 357 7421</div>
+            <div>Tel: +358 50 357 7421</div>
           </div>
         </div>
         <div className='info-certificate footer-row'>

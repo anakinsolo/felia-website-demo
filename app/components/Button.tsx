@@ -35,7 +35,7 @@ export default function Button({ label, to, className, isIcon, onClick }: Button
 
   if (to) {
     return (
-      <Link to={to} className={buttonClassName} onClick={handleClick}>
+      <Link to={to} className={buttonClassName} onClick={onClick ?? handleClick}>
         {label}
       </Link>
     );

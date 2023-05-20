@@ -4,8 +4,8 @@ import { json } from '@remix-run/node';
 import ContactSection, { links as contactSectionStylesheet } from '~/components/ContactSection';
 import type { FormValues } from '~/services/mailservice.server';
 import { sendMail } from '~/services/mailservice.server';
-import FlashMessage, { links as flashMessageStyles } from '~/components/FlashMessage';
-import { useActionData, useLoaderData } from '@remix-run/react';
+import { links as flashMessageStyles } from '~/components/FlashMessage';
+import { useLoaderData } from '@remix-run/react';
 import type { ISbStoriesParams } from '@storyblok/react';
 import {
   getStoryblokApi,
@@ -46,7 +46,6 @@ export async function action({ request }: ActionArgs) {
 }
 
 export default function Index() {
-  const data = useActionData();
   let story = useLoaderData();
   story = useStoryblokState(story);
 
@@ -56,7 +55,6 @@ export default function Index() {
       <section className='contact-section'>
         <ContactSection />
       </section>
-      <FlashMessage message={data?.message} error={data?.error} />
     </div>
   );
 }

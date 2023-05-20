@@ -16,7 +16,7 @@ export default function FlashMessage({ message, error }: FlashMessageProps) {
       setIsFlashVisible(true);
       setTimeout(() => {
         setIsFlashVisible(false);
-      }, 5000);
+      }, 2000);
     }
   }, [message, error]);
 

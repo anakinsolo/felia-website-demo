@@ -13,9 +13,6 @@ export default function ContactSection() {
         <div className='title'>Get in <span className='inner-text'>touch</span></div>
         <div className='title small'>with our <span className='inner-text'>team</span></div>
         <div className='contact-detail-container'>
-          {/* <div>Business ID: 3340263-9</div>
-          <div>Email: hello@felia.fi</div>
-          <div>Tel: (+358)50 357 7421</div> */}
           <div className='social-media-container'>
             <a href='https://www.facebook.com/felia.solutions.oy/' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
               <i className='fa fa-facebook-square' aria-hidden='true'></i>

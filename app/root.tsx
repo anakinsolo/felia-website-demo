@@ -7,6 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useActionData,
   useLoaderData,
 } from '@remix-run/react';
 import type { ReactNode } from 'react';
@@ -22,6 +23,7 @@ import Title from './components/Title';
 import ServiceList from './components/ServiceList';
 import AboutSection from './components/AboutSection';
 import WorkList from './components/WorkList';
+import FlashMessage from './components/FlashMessage';
 
 const isServer = typeof window === 'undefined';
 const accessToken = isServer
@@ -75,7 +77,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body>        
         {children}
         <script
           dangerouslySetInnerHTML={{
@@ -91,8 +93,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
 };
 
 export default function App() {
+  const data = useActionData();
   return (
     <RootLayout>
+      <FlashMessage message={data?.message} error={data?.error} />
       <Header />
       <main><Outlet /></main>
       <Footer />
