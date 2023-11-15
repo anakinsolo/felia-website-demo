@@ -26,7 +26,7 @@ export default function Header() {
   }
 
   function getSlug(url: string) {
-    return new URL(url).pathname.match(/[^\/]+/g);
+    return new URL(url).pathname.match(/[^\\/]+/g);
   }
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
